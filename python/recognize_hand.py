@@ -13,9 +13,12 @@ while cap.isOpened():
     if not ret:
         break
 
+     # Voltear el frame horizontalmente (espejo)
+    frame = cv2.flip(frame, 1)
+
     # Convertir la imagen a escala de grises
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
+    
     # Detectar manos
     results = hands.process(frame)
 
