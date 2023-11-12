@@ -5,8 +5,15 @@ import mediapipe as mp
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
-# Capturar el video de la cámara
-cap = cv2.VideoCapture(0)
+# Obtener el número total de cámaras disponibles
+num_cameras = 2  # Puedes cambiar esto según el número de cámaras que tengas.
+
+# Pedir al usuario que elija una cámara
+print("Selecciona una cámara (0 - {}):".format(num_cameras - 1))
+camera_idx = int(input())
+
+# Inicializar la cámara seleccionada
+cap = cv2.VideoCapture(camera_idx)
 
 while cap.isOpened():
     ret, frame = cap.read()

@@ -1,13 +1,30 @@
 import cv2
 import mediapipe as mp
 import math
+from os import system
 
 # Inicializar el detector de manos
+system("cls")
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
-# Capturar el video de la cámara
-cap = cv2.VideoCapture(0)
+# Obtener el número total de cámaras disponibles
+num_cameras = 2 
+
+# Pedir al usuario que elija una cámara
+print("Selecciona una cámara (0 - {}):".format(num_cameras - 1))
+camera_idx = int(input())
+
+# Inicializar la cámara seleccionada
+cap = cv2.VideoCapture(camera_idx)
+
+# Obtener medidas de la pantalla
+screen_height = 1280
+screen_width = screen_height
+
+# Establecer la ventana en modo de pantalla completa
+#cv2.namedWindow('Hand Detection', cv2.WND_PROP_FULLSCREEN)
+#cv2.setWindowProperty('Hand Detection', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
 while cap.isOpened():
     ret, frame = cap.read()
@@ -35,6 +52,8 @@ while cap.isOpened():
 
             # Calcular la distancia euclidiana
             distance = math.sqrt((index_tip.x - index_base.x)**2 + (index_tip.y - index_base.y)**2)
+            #si es la webcam, divido para contrarrestar medidas
+            if camera_idx == 1: distance = distance / 1.5714
             cv2.putText(frame, f'Distancia 5 a 8: {distance:.2f}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
     # Mostrar el frame con las detecciones
