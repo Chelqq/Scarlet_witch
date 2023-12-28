@@ -10,3 +10,8 @@ https://github.com/espressif/esp-iot-solution/tree/master/examples/usb/host		ESP
 https://www.tostatronic.com/product/motorreductores-jga25-370-12v/			motor 12v .27mA 350 rpm
 https://articulo.mercadolibre.com.mx/MLM-1940250219-esp32-s3-wroom-devkitc-1-n8r2-wifi-ble-5-8m-psram-dual-usb-c-_JM?quantity=2		esp32 s3
 https://www.ele-gate.com/producto/webcam-usb-camara-computadora-con-microfono/		webcam (checar MJPEG commpress)
+
+https://forum.arduino.cc/t/atmega328p-esp8266-wifi-tutorial/944380
+https://www.makerguides.com/es/servo-arduino-tutorial/
+https://www.instructables.com/UNO-R3-WIFI-ESP8266-CH340G-Arduino-and-WIFI-a-Vers/
+https://www.youtube.com/watch?v=tj2fwh989D8
