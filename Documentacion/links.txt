@@ -1,4 +1,12 @@
 https://inmoov.fr/inmoov-stl-parts-viewer/?bodyparts=Right-Hand         DOWNLOAD bodyparts
-https://www.redalyc.org/journal/467/46753192004/html/                   ALGO SURF
+
+https://www.redalyc.org/journal/467/46753192004/html/                   ALGO SURF	(img depth)
 https://mediapipe-studio.webapps.google.com/studio/demo/hand_landmarker         DOCS mediapipe
 https://developers.google.com/mediapipe/solutions/vision/hand_landmarker#models         DOCS mediapipe
+
+https://github.com/espressif/esp-iot-solution/tree/master/examples/usb/host		ESP32 S2 projects
+
+
+https://www.tostatronic.com/product/motorreductores-jga25-370-12v/			motor 12v .27mA 350 rpm
+https://articulo.mercadolibre.com.mx/MLM-1940250219-esp32-s3-wroom-devkitc-1-n8r2-wifi-ble-5-8m-psram-dual-usb-c-_JM?quantity=2		esp32 s3
+https://www.ele-gate.com/producto/webcam-usb-camara-computadora-con-microfono/		webcam (checar MJPEG commpress)
