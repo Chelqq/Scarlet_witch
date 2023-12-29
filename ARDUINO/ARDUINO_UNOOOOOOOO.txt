@@ -1,0 +1,5 @@
+Remainder, the black chinese Arduino im using is a ->>>>>>ARDUINO UNO<<<<<<-
+in pins 3 & 4
+
+
+or an esp8266 if used in pins 5, 6 & 7.
