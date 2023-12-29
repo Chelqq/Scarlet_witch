@@ -1,4 +1,5 @@
 #include <Servo.h>
+//usa ARDUI UNOOOO
 
 Servo miServo;  // Crear un objeto de la clase Servo para controlar el servomotor
 Servo miServo2;  // Crear un objeto de la clase Servo para controlar el servomotor
