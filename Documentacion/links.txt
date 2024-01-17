@@ -15,3 +15,8 @@ https://forum.arduino.cc/t/atmega328p-esp8266-wifi-tutorial/944380
 https://www.makerguides.com/es/servo-arduino-tutorial/
 https://www.instructables.com/UNO-R3-WIFI-ESP8266-CH340G-Arduino-and-WIFI-a-Vers/
 https://www.youtube.com/watch?v=tj2fwh989D8
+
+https://www.luisllamas.es/controlar-arduino-con-python-y-la-libreria-pyserial/
+
+https://cdn.sparkfun.com/datasheets/Robotics/hs805.pdf (SERVO PARA BICEP)
+https://groups.google.com/g/inmoov/c/FW3tZmAdfBs?pli=1		(hilo de google para ver alternativas al servo de arriba)
