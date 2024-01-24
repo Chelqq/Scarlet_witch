@@ -27,8 +27,8 @@ screen_width = screen_height
 #cv2.setWindowProperty('Hand Detection', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
 while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
+    frame_read_ok, frame = cap.read()
+    if not frame_read_ok:
         break
 
      # Voltear el frame horizontalmente (espejo)
@@ -46,21 +46,33 @@ while cap.isOpened():
                 h, w, c = frame.shape
                 cx, cy = int(landmark.x * w), int(landmark.y * h)
                 cv2.circle(frame, (cx, cy), 5, (255, 0, 0), -1)
-    # Obtener coordenadas de los puntos 8 y 5
-            index_tip = hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP]
-            index_base = hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_MCP]
+    # Obtener coordenadas de los puntos de cada dedo
+                #INDEX
+            index4 = hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP]
+            index3 = hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_DIP]
+            index2 = hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_PIP]
+            index1 = hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_MCP]
+                #MIDDLE
+                #RING
 
+            distance = math.sqrt((index4.x - index1.x)**2 + (index4.y - index1.y)**2)
+
+            #calcular distancia entre puntos 5 y 8, a una distancia de 1.5 mts = lecturas inestables -------------------->> DEPRECATED
+            '''
             # Calcular la distancia euclidiana
-            distance = math.sqrt((index_tip.x - index_base.x)**2 + (index_tip.y - index_base.y)**2)
             #si es la webcam, divido para contrarrestar medidas
             if camera_idx == 1: distance = distance / 1.5714
             cv2.putText(frame, f'Distancia 5 a 8: {distance:.2f}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            '''
+
+
+
 
     # Mostrar el frame con las detecciones
     cv2.imshow('Hand Detection', frame)
 
     # Salir si se presiona la tecla 'q'
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(5) & 0xFF == ord('q'):
         break
 
 # Liberar recursos
