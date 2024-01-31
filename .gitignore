@@ -164,4 +164,15 @@ cython_debug/
 *.gcode
 *.stl
 *.zip
+
+
+
+.python/
+
+
+
+
+
+
+
 *.rar
