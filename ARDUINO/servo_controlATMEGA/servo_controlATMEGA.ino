@@ -7,7 +7,8 @@ Servo miServo3;
 Servo miServo4;
 Servo miServo5;
 Servo miServo6;
-int tiempoEspera = 2000;  // Tiempo de espera entre movimientos en milisegundos (en este caso, 2 segundos)
+int angle = 180;
+int tiempoEspera = 5000;  // Tiempo de espera entre movimientos en milisegundos (en este caso, 2 segundos)
 
 void setup() {
   miServo.attach(2);  // El pin al que está conectado el servo (cámbialo si es necesario)
@@ -19,14 +20,16 @@ void setup() {
 }
 
 void loop() {
+  
     miServo.write(0);  // Establecer la posición del servo
     miServo2.write(0);
     miServo3.write(0);
     miServo4.write(0);
     miServo5.write(0);
     miServo6.write(0);
-    delay(1000);
+    delay(tiempoEspera);
 
+  /*
     miServo.write(90);  // Establecer la posición del servo
     miServo2.write(90);
     miServo3.write(90);
@@ -34,14 +37,14 @@ void loop() {
     miServo5.write(90);
     miServo6.write(90);
     delay(1000);
-
-    miServo.write(180);  // Establecer la posición del servo
-    miServo2.write(180);
-    miServo3.write(180);
-    miServo4.write(180);
-    miServo5.write(180);
-    miServo6.write(180);
-    delay(1000);
+  */
+    miServo.write(angle);  // Establecer la posición del servo
+    miServo2.write(angle);
+    miServo3.write(angle);
+    miServo4.write(angle);
+    miServo5.write(angle);
+    miServo6.write(angle);
+    delay(tiempoEspera);
 
   // Mover el servo de 0° a 180°
   /*
