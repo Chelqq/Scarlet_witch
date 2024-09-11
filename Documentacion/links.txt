@@ -20,3 +20,6 @@ https://www.luisllamas.es/controlar-arduino-con-python-y-la-libreria-pyserial/
 
 https://cdn.sparkfun.com/datasheets/Robotics/hs805.pdf (SERVO PARA BICEP)
 https://groups.google.com/g/inmoov/c/FW3tZmAdfBs?pli=1		(hilo de google para ver alternativas al servo de arriba)
+
+
+https://sites.google.com/cucei.udg.mx/proyectosmodularesinni/sugerencias-de-proyectos-modulares?authuser=0 PROYECTOS MODULARES CUCEI
