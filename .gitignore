@@ -178,3 +178,9 @@ python/
 
 
 *.rar
+*.h
+*.cpp
+*.jpeg
+*.ino
+*.docx
+*.pdf
